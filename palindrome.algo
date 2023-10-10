@@ -1,0 +1,30 @@
+ALGORITHM palindrome
+VAR
+    ch : ARRAY_OF STRING[n]; 
+    i,n : INTEGER;
+    palindrome : BOOLEAN;
+BEGIN
+    write (ch)
+    read (ch)
+    IF (n = 0 or n = 1) THEN 
+    palindrome := TRUE
+    // write ch is palindrome
+    END_IF
+    IF (ch[i]<>ch[n-1-1]) THEN /*compare the characters located at the ends of the word if false*/
+    palindrome := false
+    // write ch is not palindrome
+    ELSE
+    FOR i FROM 0 TO n/2 STEP step1  DO
+        IF (ch[i] = ch[n-1-1]) THEN
+            palindrome := TRUE
+            // write ch is palindrome
+        END_IF
+    END_FOR
+    END_IF
+    IF (palindrome:=TRUE) THEN
+        write ("ch is palindrome")
+        else
+        write ("ch is not palindrome")
+    END_IF
+    
+END
